@@ -40,7 +40,11 @@
 html, body, .site-wrapper {
   height: 100%;
 }
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: #ffffff;
   font-size: 16px;
@@ -1953,7 +1957,7 @@ blockquote p {
   background: -webkit-linear-gradient(left, #ffffff 0%, transparent 100%);
   background: -o-linear-gradient(left, #ffffff 0%, transparent 100%);
   background: linear-gradient(to right, #ffffff 0%, transparent 100%);
-  opacity: 0.3;
+  opacity: 0;
   z-index: -1;
 }
 
@@ -2168,9 +2172,9 @@ blockquote p {
 }
 
 .banner a:hover img {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .banner a img {
@@ -5118,4 +5122,158 @@ blockquote p {
   color: #db1a48;
   margin: 0 4px;
   font-size: 13px;
+}
+
+
+
+/* This is the feature section  */
+
+
+.mockup {
+  position: relative; /* Ensures the image moves relative to its position */
+  animation: upDown 2s ease-in-out infinite; /* Apply the animation */
+}
+
+/* Keyframes for the up and down motion */
+@keyframes upDown {
+  0% {
+    transform: translateY(0); /* Start at original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up by 10px */
+  }
+  100% {
+    transform: translateY(0); /* Move back to original position */
+}
+}
+
+
+.features-section {
+  overflow-x: initial;
+  background: var(--section-color);
+}
+.features-section .single-box {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 50px;
+}
+.features-section .single-box h5 {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.features-section .reverse .single-box {
+  flex-direction: row-reverse;
+  text-align: end;
+}
+.features-section .sec-img {
+  margin: 31px 0 62px;
+}
+.features-section .sec-img img {
+  z-index: 0;
+}
+.features-section .sec-img .rectangle {
+  position: absolute;
+  right: -10px;
+}
+
+.section-header {
+  margin-bottom: 50px;
+}
+
+.img-area img {
+  width: 100px;
+}
+.img-area2 img {
+  width: 50px;
+}
+
+@media (max-width: 991px) {
+  .pb-120 {
+    padding-bottom: 60px;
+  }
+}
+
+.pb-120 {
+  padding-bottom: 120px;
+}
+
+/* This is best watch section  */
+.best-watch .features-area {
+  column-count: 2;
+}
+.best-watch .single-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+}
+
+.best-watch .single-box h6 {
+  font-weight: 600;
+}
+.best-watch .mockup {
+  position: absolute;
+  right: 0;
+}
+.best-watch .sec-img img {
+  z-index: 0;
+}
+
+
+ .cmn-btn {
+  padding: 20px 15px;
+}
+ .cmn-btn:hover {
+  color: var(--para-color);
+}
+
+
+/* Thsi is for the footer section  */
+/* whatsapp */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .1s all ease-in-out;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: white;
+  box-shadow: 0 0 .75rem #18d26e;
+  line-height: 0.5;
+
+  background-color: #18d26e;
+}
+
+.whatsapp:hover {
+  background-color: white;
+  color: #18d26e;
+}
+
+.call {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  transition: .1s all ease-in-out;
+  height: 60px;
+  display: flex;
+  line-height: 1;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: white;
+  background-color: #222222;
+  box-shadow: 0 0 .5rem #eee;
+}
+
+.call:hover {
+  background-color: white;
+  color: #222222;
 }
