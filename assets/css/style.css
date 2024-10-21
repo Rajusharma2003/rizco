@@ -469,7 +469,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 5% 0;
+  padding: 12% 0;
 }
 
 .page-title {
@@ -2359,7 +2359,7 @@ blockquote p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
@@ -5340,4 +5340,28 @@ blockquote p {
 
 .button-79:not(:disabled):active {
   transform: translateY(.125rem);
+}
+
+
+/* This is for about us overview secion code  */
+.gradient-bg {
+  background: linear-gradient(135deg, rgb(121, 17, 69), #4e504e); /* Gradient background */
+  color: white;
+  border-radius: 8px;
+  border: none;
+}
+
+.about-us p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visuals */
+}
+
+@media (max-width: 768px) {
+  .about-us p {
+      font-size: 1rem;
+  }
 }
